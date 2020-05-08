@@ -18,6 +18,8 @@ namespace RanfurlyCentre
             //_frm.cmbKeyCode.SelectedIndex = -1;            
         }
 
+        //srsdfasasdasdasd
+
         protected virtual void setComboBoxValues()
         {
             _frm.cmbStaffAccompanyingId.SelectedValue = _frm._appointmentBase.StaffAccompanying.PersonId;
