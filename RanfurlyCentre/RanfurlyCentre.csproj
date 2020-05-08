@@ -1,0 +1,791 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC703E42-21D8-470D-B545-A10D9A11DACC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RanfurlyCentre</RootNamespace>
+    <AssemblyName>RanfurlyCentre</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>RanfurlyCentre.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\EditBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\EditBox.Designer.cs">
+      <DependentUpon>EditBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\InterfaceClasses\Jarvis.cs" />
+    <Compile Include="Application\InterfaceClasses\License.cs" />
+    <Compile Include="Application\LoginFormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\LoginFormTest.designer.cs">
+      <DependentUpon>LoginFormTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Appointments\AddEditAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointments\AddEditAppointment.Designer.cs">
+      <DependentUpon>AddEditAppointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Appointments\AppointmenetTypeClasses\AppointmentClassBase.cs" />
+    <Compile Include="Appointments\AppointmenetTypeClasses\NewDoctorAppointmentClass.cs" />
+    <Compile Include="Appointments\AppointmenetTypeClasses\NewSpecialistAppointmentClass.cs" />
+    <Compile Include="Appointments\AppointmenetTypeClasses\SpecialistAppointmentClass.cs" />
+    <Compile Include="Appointments\AppointmenetTypeClasses\DoctorAppointmentClass.cs" />
+    <Compile Include="Appointments\AppointmenetTypeClasses\NewAppointmentClass.cs" />
+    <Compile Include="Appointments\AppointmentSearchClasses\AppointmentSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointments\AppointmentSearchClasses\AppointmentSearch.designer.cs">
+      <DependentUpon>AppointmentSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Appointments\AppointmentSearchClasses\PastAppointmentClass.cs" />
+    <Compile Include="Appointments\AppointmentSearchClasses\AppointmentsWaitingClosureClass.cs" />
+    <Compile Include="Appointments\AppointmentSearchClasses\ActiveAppointmentsClass.cs" />
+    <Compile Include="Appointments\AppointmentSearchClasses\AppointmentSearchClassBase.cs" />
+    <Compile Include="Email\EmailBase.cs" />
+    <Compile Include="Email\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileExportDashboard\IncidentFile.cs" />
+    <Compile Include="FileExportDashboard\ResidentRollCallYearlySummaryByMonthFile.cs" />
+    <Compile Include="FileExportDashboard\ResidentRollCallYearlySummaryFile .cs" />
+    <Compile Include="FileExportDashboard\ResidentRollCallMonthlySummaryFile.cs" />
+    <Compile Include="FileExportDashboard\SpecialistFile.cs" />
+    <Compile Include="FileExportDashboard\ResidentRollCalFile.cs" />
+    <Compile Include="IncidentSearch\IncidentAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncidentSearch\IncidentAddEdit.Designer.cs">
+      <DependentUpon>IncidentAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IncidentSearch\IncidentClasses\IncidentTypeClasses\StaffAndStudentType.cs" />
+    <Compile Include="IncidentSearch\IncidentClasses\IncidentTypeClasses\OtherType.cs" />
+    <Compile Include="IncidentSearch\IncidentClasses\IncidentTypeClasses\StaffType.cs" />
+    <Compile Include="IncidentSearch\IncidentClasses\IncidentTypeClasses\StudentType.cs" />
+    <Compile Include="IncidentSearch\IncidentClasses\IncidentTypeClasses\IncidentTypeBase.cs" />
+    <Compile Include="IncidentSearch\IncidentClasses\IncidentUpdateClasses\IncidentUpdate.cs" />
+    <Compile Include="IncidentSearch\IncidentClasses\IncidentUpdateClasses\IncidentAdd.cs" />
+    <Compile Include="IncidentSearch\IncidentClasses\IncidentUpdateClasses\IncidentAddEditBase.cs" />
+    <Compile Include="ProfessionalServices\ProfessionalAssign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfessionalServices\ProfessionalAssign.Designer.cs">
+      <DependentUpon>ProfessionalAssign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfessionalServices\ProfessionalAddEditClasses\AddEditProfessionalBase.cs" />
+    <Compile Include="ProfessionalServices\ProfessionalAddEditClasses\AddNewProfessional.cs" />
+    <Compile Include="ProfessionalServices\ProfessionalAddEditClasses\EditProfessional.cs" />
+    <Compile Include="ProfessionalServices\ProfessionalAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfessionalServices\ProfessionalAddEdit.Designer.cs">
+      <DependentUpon>ProfessionalAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfessionalServices\ProfessionalServicesSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfessionalServices\ProfessionalServicesSearch.designer.cs">
+      <DependentUpon>ProfessionalServicesSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\OtherReportClasses\StudentDoctors.cs" />
+    <Compile Include="Reports\OtherReportClasses\Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\OtherReportClasses\Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\OtherReportClasses\ReportBase.cs" />
+    <Compile Include="Reports\RDLCReports\RDLCReportClasses\RDLCReportBase.cs" />
+    <Compile Include="EmergencyContact\Old_NotInUseDeleteLater\EmergencyContactAddToExistingStudent.cs" />
+    <Compile Include="EmergencyContact\Old_NotInUseDeleteLater\EmergencyContactAddToNewStudent.cs" />
+    <Compile Include="EmergencyContact\Old_NotInUseDeleteLater\EmergencyContactAddBase.cs" />
+    <Compile Include="FileExportDashboard\DoctorFile.cs" />
+    <Compile Include="FileExportDashboard\StaffFile.cs" />
+    <Compile Include="FileExportDashboard\IndividualStudentFile.cs" />
+    <Compile Include="FileExportDashboard\StudentFile.cs" />
+    <Compile Include="FileExportDashboard\FileExportBase.cs" />
+    <Compile Include="FileExportDashboard\FileExportDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileExportDashboard\FileExportDashboard.Designer.cs">
+      <DependentUpon>FileExportDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalCondition\MedicalCondtionAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicalCondition\MedicalCondtionAdd.Designer.cs">
+      <DependentUpon>MedicalCondtionAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NextOfKin\NotInUse_DeleteLater\AddNextOfKinBase.cs" />
+    <Compile Include="NextOfKin\NotInUse_DeleteLater\AddNewNextOfKin.cs" />
+    <Compile Include="NextOfKin\NotInUse_DeleteLater\NextOfKinAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NextOfKin\NotInUse_DeleteLater\NextOfKinAdd.Designer.cs">
+      <DependentUpon>NextOfKinAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDLCReports\ReportViewerClasses\YearlyResidentRollCallByMonth.cs" />
+    <Compile Include="Reports\RDLCReports\ReportViewerClasses\YearlyResidentRollCallByResident.cs" />
+    <Compile Include="Reports\RDLCReports\ReportViewerClasses\MonthlyResidentRollCall.cs" />
+    <Compile Include="Reports\RDLCReports\ReportViewerClasses\IndividualStudentReport.cs" />
+    <Compile Include="Reports\RDLCReports\ReportViewerClasses\ReportBase.cs" />
+    <Compile Include="ResidentRollCall\Reports\ReportContainer.cs" />
+    <Compile Include="ResidentRollCall\ResidentRollCallEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResidentRollCall\ResidentRollCallEdit.Designer.cs">
+      <DependentUpon>ResidentRollCallEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResidentRollCall\ResidentRollCallFileRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResidentRollCall\ResidentRollCallFileRemove.Designer.cs">
+      <DependentUpon>ResidentRollCallFileRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResidentRollCall\ResidentRollCallYearlySummaryByMonth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResidentRollCall\ResidentRollCallYearlySummaryByMonth.Designer.cs">
+      <DependentUpon>ResidentRollCallYearlySummaryByMonth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResidentRollCall\ResidentRollCallYearlySummarByResidenty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResidentRollCall\ResidentRollCallYearlySummarByResidenty.Designer.cs">
+      <DependentUpon>ResidentRollCallYearlySummarByResidenty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResidentRollCall\ResidentRollCallMonthlySummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResidentRollCall\ResidentRollCallMonthlySummary.Designer.cs">
+      <DependentUpon>ResidentRollCallMonthlySummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResidentRollCall\RollCallClasses\RollCallYearlySummaryCalculatorByMonth.cs" />
+    <Compile Include="ResidentRollCall\RollCallClasses\RollCallYearlySummaryCalculatorByResident.cs" />
+    <Compile Include="ResidentRollCall\RollCallClasses\RollCallMonthlySummaryCalculator.cs" />
+    <Compile Include="ResidentRollCall\RollCallClasses\RollCallSummaryCalculatorBase.cs" />
+    <Compile Include="ResidentRollCall\RollCallSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResidentRollCall\RollCallSearch.designer.cs">
+      <DependentUpon>RollCallSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchSQL\IncidentSearchSQL\AllIncidents.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="IncidentSearch\IncidentSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncidentSearch\IncidentSearch.designer.cs">
+      <DependentUpon>IncidentSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResidentRollCall\ImportResidentRollCall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResidentRollCall\ImportResidentRollCall.Designer.cs">
+      <DependentUpon>ImportResidentRollCall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\AddDefaults\StudentDefaults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\AddDefaults\StudentDefaults.Designer.cs">
+      <DependentUpon>StudentDefaults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\CommunicatioNote\AddEditCommunicationNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\CommunicatioNote\AddEditCommunicationNote.Designer.cs">
+      <DependentUpon>AddEditCommunicationNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\StudentAddEdit\RowValidatiingEvent\CommunityInterractionValidator.cs" />
+    <Compile Include="Students\StudentAddEdit\RowValidatiingEvent\CommunicationNoteValidator.cs" />
+    <Compile Include="Students\StudentAddEdit\RowValidatiingEvent\EpilepsyValidator.cs" />
+    <Compile Include="Students\StudentAddEdit\RowValidatiingEvent\AllergyValidator.cs" />
+    <Compile Include="Students\StudentAddEdit\RowValidatiingEvent\NextOfKinValidator.cs" />
+    <Compile Include="Students\StudentAddEdit\RowValidatiingEvent\MedicationAndTreatmentValidator.cs" />
+    <Compile Include="Students\StudentAddEdit\RowValidatiingEvent\EmergencyContactsValidator.cs" />
+    <Compile Include="Students\StudentAddEdit\RowValidatiingEvent\CommunityOrientationValidator.cs" />
+    <Compile Include="Students\StudentAddEdit\RowValidatiingEvent\PhysicalAbilityValidator.cs" />
+    <Compile Include="Students\StudentAddEdit\RowValidatiingEvent\AsthmaValidator.cs" />
+    <Compile Include="Students\StudentAddEdit\RowValidatiingEvent\BehaviourValidator.cs" />
+    <Compile Include="Students\StudentAddEdit\RowValidatiingEvent\RiskManagementValidator.cs" />
+    <Compile Include="Students\StudentAddEdit\RowValidatiingEvent\PersonalCareValidator.cs" />
+    <Compile Include="Students\StudentAddEdit\RowValidatiingEvent\MedicalConditionValidator.cs" />
+    <Compile Include="Students\StudentAddEdit\RowValidatiingEvent\DatagridViewRowValidatorBase.cs" />
+    <Compile Include="Students\StudentAddEdit\StudentAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\StudentAddEdit\StudentAddEdit.Designer.cs">
+      <DependentUpon>StudentAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\StudentAddEdit\StudentAddEditClass.cs" />
+    <Compile Include="Students\StudentAddEdit\StudentAddEditBaseClass.cs" />
+    <Compile Include="SearchSQL\StudentSearchSQL\AllPastStudents.cs" />
+    <Compile Include="SearchSQL\StudentSearchSQL\AllNonResidentStudents.cs" />
+    <Compile Include="SearchSQL\StudentSearchSQL\AllShortStayResidents.cs" />
+    <Compile Include="SearchSQL\StudentSearchSQL\AllStudentsAttendActivityCentre.cs" />
+    <Compile Include="SearchSQL\StudentSearchSQL\AllResidentStudents.cs" />
+    <Compile Include="SearchSQL\StudentSearchSQL\AllCurrentStudents.cs" />
+    <Compile Include="SearchSQL\SqlGeneratorBase.cs" />
+    <Compile Include="Doctors\DoctorAddEditClasses\AddNewDoctor.cs" />
+    <Compile Include="Doctors\DoctorAddEditClasses\EditDoctor.cs" />
+    <Compile Include="Doctors\DoctorAddEditClasses\AddEditDoctorBase.cs" />
+    <Compile Include="Application\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctors\DoctorAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctors\DoctorAddEdit.Designer.cs">
+      <DependentUpon>DoctorAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmergencyContact\Old_NotInUseDeleteLater\EmergencyContactAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmergencyContact\Old_NotInUseDeleteLater\EmergencyContactAdd.Designer.cs">
+      <DependentUpon>EmergencyContactAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ethnicity\EthnicityAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ethnicity\EthnicityAdd.Designer.cs">
+      <DependentUpon>EthnicityAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ethnicity\EthnicityEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ethnicity\EthnicityEdit.Designer.cs">
+      <DependentUpon>EthnicityEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\StaffAddEdit\StaffAddEditBase.cs" />
+    <Compile Include="Staff\StaffAddEdit\StaffAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff\StaffAddEdit\StaffAddEdit.designer.cs">
+      <DependentUpon>StaffAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\StaffAddEdit\StaffAdd.cs" />
+    <Compile Include="Staff\StaffAddEdit\StaffEdit.cs" />
+    <Compile Include="Staff\StaffSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff\StaffSearch.designer.cs">
+      <DependentUpon>StaffSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\LocationAllocation\StaffLocationAllocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff\LocationAllocation\StaffLocationAllocation.Designer.cs">
+      <DependentUpon>StaffLocationAllocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\LocationAllocation\LocationRemove.cs" />
+    <Compile Include="Staff\LocationAllocation\LocationAllocateRemoveBase.cs" />
+    <Compile Include="Staff\LocationAllocation\LocationAllocate.cs" />
+    <Compile Include="Students\StudentSearch\StudentSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\StudentSearch\StudentSearch.designer.cs">
+      <DependentUpon>StudentSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Location\LocationAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Location\LocationAdd.Designer.cs">
+      <DependentUpon>LocationAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Location\LocationEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Location\LocationEdit.Designer.cs">
+      <DependentUpon>LocationEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctors\DoctorSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctors\DoctorSearch.designer.cs">
+      <DependentUpon>DoctorSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Initialiser\StudentEditIntialiser.cs" />
+    <Compile Include="Initialiser\GenericFormIntialiser.cs" />
+    <Compile Include="Initialiser\FormInitialiserBase.cs" />
+    <Compile Include="NextOfKin\NextOfKinAssign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NextOfKin\NextOfKinAssign.Designer.cs">
+      <DependentUpon>NextOfKinAssign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\InterfaceClasses\InterfaceTasks.cs" />
+    <Compile Include="Application\InterfaceClasses\ReportProcessor.cs" />
+    <Compile Include="Reports\RDLCReports\ReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RDLCReports\ReportViewer.Designer.cs">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\LoginForm.designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\MDIMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\MDIMainForm.designer.cs">
+      <DependentUpon>MDIMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\InterfaceClasses\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Doctors\DoctorAddAssign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctors\DoctorAddAssign.Designer.cs">
+      <DependentUpon>DoctorAddAssign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Welcome.designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\StudentViewIncidents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\StudentViewIncidents.Designer.cs">
+      <DependentUpon>StudentViewIncidents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUser\AddNewSystemUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemUser\AddNewSystemUser.Designer.cs">
+      <DependentUpon>AddNewSystemUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUser\AdminChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemUser\AdminChangePassword.Designer.cs">
+      <DependentUpon>AdminChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUser\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemUser\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUser\SystemUserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemUser\SystemUserList.Designer.cs">
+      <DependentUpon>SystemUserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUser\AdminAction.cs" />
+    <Compile Include="SystemUser\UserRoleActionBase.cs" />
+    <EmbeddedResource Include="Application\EditBox.resx">
+      <DependentUpon>EditBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\LoginFormTest.resx">
+      <DependentUpon>LoginFormTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Appointments\AddEditAppointment.resx">
+      <DependentUpon>AddEditAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Appointments\AppointmentSearchClasses\AppointmentSearch.resx">
+      <DependentUpon>AppointmentSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Email\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncidentSearch\IncidentAddEdit.resx">
+      <DependentUpon>IncidentAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfessionalServices\ProfessionalAssign.resx">
+      <DependentUpon>ProfessionalAssign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfessionalServices\ProfessionalAddEdit.resx">
+      <DependentUpon>ProfessionalAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfessionalServices\ProfessionalServicesSearch.resx">
+      <DependentUpon>ProfessionalServicesSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDLCReports\IndividualStudentReport.rdlc" />
+    <EmbeddedResource Include="Reports\OtherReportClasses\Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileExportDashboard\FileExportDashboard.resx">
+      <DependentUpon>FileExportDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalCondition\MedicalCondtionAdd.resx">
+      <DependentUpon>MedicalCondtionAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NextOfKin\NotInUse_DeleteLater\NextOfKinAdd.resx">
+      <DependentUpon>NextOfKinAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncidentSearch\IncidentSearch.resx">
+      <DependentUpon>IncidentSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDLCReports\YearlyResidentRollCallReportByMonth.rdlc" />
+    <EmbeddedResource Include="Reports\RDLCReports\YearlyResidentRollCallReportByResident.rdlc" />
+    <EmbeddedResource Include="ResidentRollCall\ImportResidentRollCall.resx">
+      <DependentUpon>ImportResidentRollCall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDLCReports\MonthlyResidentRollCallReport.rdlc" />
+    <EmbeddedResource Include="ResidentRollCall\ResidentRollCallEdit.resx">
+      <DependentUpon>ResidentRollCallEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResidentRollCall\ResidentRollCallFileRemove.resx">
+      <DependentUpon>ResidentRollCallFileRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResidentRollCall\ResidentRollCallYearlySummaryByMonth.resx">
+      <DependentUpon>ResidentRollCallYearlySummaryByMonth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResidentRollCall\ResidentRollCallYearlySummarByResidenty.resx">
+      <DependentUpon>ResidentRollCallYearlySummarByResidenty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResidentRollCall\ResidentRollCallMonthlySummary.resx">
+      <DependentUpon>ResidentRollCallMonthlySummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResidentRollCall\RollCallSearch.resx">
+      <DependentUpon>RollCallSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\AddDefaults\StudentDefaults.resx">
+      <DependentUpon>StudentDefaults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\CommunicatioNote\AddEditCommunicationNote.resx">
+      <DependentUpon>AddEditCommunicationNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\StudentAddEdit\StudentAddEdit.resx">
+      <DependentUpon>StudentAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctors\DoctorAddEdit.resx">
+      <DependentUpon>DoctorAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmergencyContact\Old_NotInUseDeleteLater\EmergencyContactAdd.resx">
+      <DependentUpon>EmergencyContactAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ethnicity\EthnicityAdd.resx">
+      <DependentUpon>EthnicityAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ethnicity\EthnicityEdit.resx">
+      <DependentUpon>EthnicityEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff\StaffAddEdit\StaffAddEdit.resx">
+      <DependentUpon>StaffAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff\StaffSearch.resx">
+      <DependentUpon>StaffSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff\LocationAllocation\StaffLocationAllocation.resx">
+      <DependentUpon>StaffLocationAllocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\StudentSearch\StudentSearch.resx">
+      <DependentUpon>StudentSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Location\LocationAdd.resx">
+      <DependentUpon>LocationAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Location\LocationEdit.resx">
+      <DependentUpon>LocationEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctors\DoctorSearch.resx">
+      <DependentUpon>DoctorSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NextOfKin\NextOfKinAssign.resx">
+      <DependentUpon>NextOfKinAssign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDLCReports\ReportViewer.resx">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\MDIMainForm.resx">
+      <DependentUpon>MDIMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctors\DoctorAddAssign.resx">
+      <DependentUpon>DoctorAddAssign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\StudentViewIncidents.resx">
+      <DependentUpon>StudentViewIncidents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemUser\AddNewSystemUser.resx">
+      <DependentUpon>AddNewSystemUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemUser\AdminChangePassword.resx">
+      <DependentUpon>AdminChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemUser\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemUser\SystemUserList.resx">
+      <DependentUpon>SystemUserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Application\app.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\DMFileManager.DataFile.datasource" />
+    <None Include="Properties\DataSources\DMFileManager.DMEProgressReporter.datasource" />
+    <None Include="Properties\DataSources\DMFileManager.DMEventMessenger.datasource" />
+    <None Include="Properties\DataSources\DMFileManager.Interface2.datasource" />
+    <None Include="Properties\DataSources\DMFileManager.SaveCSVFile.datasource" />
+    <None Include="Properties\DataSources\DMFileManager.SaveTXTFile.datasource" />
+    <None Include="Properties\DataSources\DMFileManager.SaveXLSXFile.datasource" />
+    <None Include="Properties\DataSources\RanfurlyBusiness.Incident.datasource" />
+    <None Include="Properties\DataSources\RanfurlyBusiness.ResidentMonthlyCallSummary.datasource" />
+    <None Include="Properties\DataSources\RanfurlyBusiness.ResidentRollCall.datasource" />
+    <None Include="Properties\DataSources\RanfurlyBusiness.ResidentYearlyCallSummaryByMonth.datasource" />
+    <None Include="Properties\DataSources\RanfurlyBusiness.Specialist.datasource" />
+    <None Include="Properties\DataSources\RanfurlyBusiness.Student.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{8b1efd99-3cd4-4670-bdd5-aeb06c4722bb}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RanfurlyBusiness\RanfurlyBusiness.csproj">
+      <Project>{A369C3A5-1BAA-49F2-A3F5-FB17B002D53C}</Project>
+      <Name>RanfurlyBusiness</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RanfurlyLogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JARVIS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddDoctor1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RemoveDoctor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddDoctor11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NextOfKin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddStudent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddStaff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StudentList.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Doctor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Doctor1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DisabilityCare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WorkCentre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attendance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emergencycontact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ethnicity.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addethnicity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disabilitycare_welcomepage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medicalcondition.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disabilitycare2.jpg" />
+    <None Include="Resources\location.png" />
+    <None Include="Resources\professionalservice.png" />
+    <None Include="Resources\professionaservice.jpg" />
+    <None Include="Resources\systemuser.jpg" />
+    <None Include="Resources\systemusers.jpg" />
+    <None Include="Resources\changepassword.png" />
+    <None Include="Resources\systemuser1.jpg" />
+    <None Include="Resources\medicalservices.jpg" />
+    <None Include="Resources\uaseradd.jpg" />
+    <None Include="Resources\incident.png" />
+    <None Include="Resources\communication.jpg" />
+    <None Include="Resources\rollcall.jpg" />
+    <None Include="Resources\importrollcall.png" />
+    <None Include="Resources\monthly.png" />
+    <None Include="Resources\yearlyByMonth.png" />
+    <None Include="Resources\YearlyByResident.jpg" />
+    <None Include="Resources\backup.jpg" />
+    <None Include="Resources\rollcall1.jpg" />
+    <None Include="Resources\appointments.jpg" />
+    <None Include="Resources\AddNewAppointment.png" />
+    <None Include="Resources\medicalservices1.jpg" />
+    <None Include="Resources\appointment.png" />
+    <None Include="Resources\systemusers.png" />
+    <None Include="Resources\incident1.png" />
+    <None Include="Resources\appointments1.jpg" />
+    <None Include="Resources\appointment1.png" />
+    <None Include="Resources\AddNewAppointment1.png" />
+    <None Include="Resources\systemusers1.png" />
+    <None Include="Resources\systemuser.png" />
+    <None Include="Resources\changepassword1.png" />
+    <None Include="Resources\Maintenance.png" />
+    <None Include="Resources\location1.png" />
+    <None Include="Resources\ethnicity.png" />
+    <None Include="Resources\backup.png" />
+    <None Include="Resources\WorkCentre1.png" />
+    <None Include="Resources\Maintenance1.png" />
+    <None Include="Resources\window.jpg" />
+    <None Include="Resources\importrollcall1.png" />
+    <None Include="Resources\about.png" />
+    <None Include="Resources\about1.png" />
+    <None Include="Resources\about2.png" />
+    <None Include="Resources\about.jpg" />
+    <None Include="Resources\about3.png" />
+    <None Include="Resources\uaseradd.png" />
+    <None Include="Resources\addappointment.jpg" />
+    <None Include="Resources\AdminSavepassword.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A369C3A5-1BAA-49F2-A3F5-FB17B002D53C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RanfurlyBusiness</RootNamespace>
+    <AssemblyName>RanfurlyBusiness</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\DMPreProcessor\DMPreProcessor\bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessObjects\Address.cs" />
+    <Compile Include="BusinessObjects\Appointment\NewAppointment.cs" />
+    <Compile Include="BusinessObjects\Appointment\AppointmentData.cs" />
+    <Compile Include="BusinessObjects\Appointment\SpecialistAppointment.cs" />
+    <Compile Include="BusinessObjects\Appointment\DoctorAppointment.cs" />
+    <Compile Include="BusinessObjects\Appointment\AppointmentBase.cs" />
+    <Compile Include="BusinessObjects\Intrface\IProperty.cs" />
+    <Compile Include="BusinessObjects\Location.cs" />
+    <Compile Include="BusinessObjects\MedicaConditionAlert\Epilepsy.cs" />
+    <Compile Include="BusinessObjects\MedicaConditionAlert\Allergy.cs" />
+    <Compile Include="BusinessObjects\MedicaConditionAlert\Asthma.cs" />
+    <Compile Include="BusinessObjects\MedicaConditionAlert\MedicalConditionAlertBase.cs" />
+    <Compile Include="BusinessObjects\MedicationAndTreatment.cs" />
+    <Compile Include="BusinessObjects\Person\Specialist.cs" />
+    <Compile Include="BusinessObjects\Person\Audiologist.cs" />
+    <Compile Include="BusinessObjects\Person\Optician.cs" />
+    <Compile Include="BusinessObjects\Person\Podatrist.cs" />
+    <Compile Include="BusinessObjects\Person\Dentist.cs" />
+    <Compile Include="BusinessObjects\ProfessionalServiceType.cs" />
+    <Compile Include="BusinessObjects\ResidentLeaveType.cs" />
+    <Compile Include="BusinessObjects\ResidentRollCallFileLog.cs" />
+    <Compile Include="BusinessObjects\ResidentRollCall.cs" />
+    <Compile Include="BusinessObjects\RiskManagementPlan.cs" />
+    <Compile Include="BusinessObjects\StudentAbility\CommunityInterraction.cs" />
+    <Compile Include="BusinessObjects\StudentAbility\CommunityOrientation.cs" />
+    <Compile Include="BusinessObjects\StudentAbility\PersonalCare.cs" />
+    <Compile Include="BusinessObjects\StudentAbility\ImportantNotes.cs" />
+    <Compile Include="BusinessObjects\StudentAbility\PhysicalAbility.cs" />
+    <Compile Include="BusinessObjects\StudentAbility\StudentAbilityBase.cs" />
+    <Compile Include="BusinessObjects\StudentBehaviour.cs" />
+    <Compile Include="BusinessObjects\Incident.cs" />
+    <Compile Include="BusinessObjects\StudentPersonalCare.cs" />
+    <Compile Include="BusinessObjects\StudentNote.cs" />
+    <Compile Include="BusinessObjects\Title.cs" />
+    <Compile Include="BusinessObjects\Ethnicity.cs" />
+    <Compile Include="BusinessObjects\Person\Staff.cs" />
+    <Compile Include="BusinessObjects\Person\NextOfKin.cs" />
+    <Compile Include="BusinessObjects\Person\Doctor.cs" />
+    <Compile Include="BusinessObjects\Person\Student.cs" />
+    <Compile Include="CommonFunctions\CommonFunctions.cs" />
+    <Compile Include="CommonFunctions\CommonVariables.cs" />
+    <Compile Include="BusinessObjects\Person\EmergencyContact.cs" />
+    <Compile Include="CommonFunctions\DataSortingAndCounts.cs" />
+    <Compile Include="CommonFunctions\Encryption.cs" />
+    <Compile Include="Data\DataFile\DataFilePartialClasses\DataFile.cs" />
+    <Compile Include="Data\DataFile\DataFilePartialClasses\DataFile_Data.cs" />
+    <Compile Include="Data\DataFile\DataFilePartialClasses\DataFile_FileInfo.cs" />
+    <Compile Include="Data\DataFile\DataFilePartialClasses\DataFile_GroupsAndCounts.cs" />
+    <Compile Include="Data\DataFile\DataFilePartialClasses\DataFile_Properties.cs" />
+    <Compile Include="Data\DataFile\Events\DMEProgressReporter.cs" />
+    <Compile Include="Data\DataFile\Events\DMEventMessenger.cs" />
+    <Compile Include="Data\DataFile\DataFilePartialClasses\Interface2.cs" />
+    <Compile Include="Data\DataFile\ExportClasses\SaveXLSXFile.cs" />
+    <Compile Include="Data\DataFile\ExportClasses\SaveTXTFile.cs" />
+    <Compile Include="Data\DataFile\ExportClasses\SaveCSVFile.cs" />
+    <Compile Include="Data\DataFile\FileTypes\ExcelDataFile.cs" />
+    <Compile Include="Data\DataFile\FileTypes\FlatDataFile.cs" />
+    <Compile Include="Data\DataFile\FileTypes\MSAccessDataFile.cs" />
+    <Compile Include="Data\SpecialistData.cs" />
+    <Compile Include="Data\EmergencyContactData.cs" />
+    <Compile Include="Data\ResidentRollCall\ResidentMonthlyCallSummary.cs" />
+    <Compile Include="Data\ResidentRollCall\ResidentYearlyCallSummaryByMonth.cs" />
+    <Compile Include="Data\ResidentRollCall\ResidentYearlyCallSummaryByResident.cs" />
+    <Compile Include="Data\ResidentRollCall\ResidentCallSummaryBase.cs" />
+    <Compile Include="Data\StudentBehaviourData.cs" />
+    <Compile Include="Data\StudentData\StudentBehaviourAddEdit.cs" />
+    <Compile Include="Data\StudentData\StudentSpecialistAddEdit.cs" />
+    <Compile Include="Data\StudentData\StudentMedicalCondtionAlertAddEdit.cs" />
+    <Compile Include="Data\StudentMedicalConditionAlertData.cs" />
+    <Compile Include="Data\StudentData\StudentPersonalCareAddEdit.cs" />
+    <Compile Include="Data\StudentData\StudentMedicationAndTreatmentAddEdit.cs" />
+    <Compile Include="Data\StudentData\StudentPhysicalAbilitiesAddEdit.cs" />
+    <Compile Include="Data\StudentData\StudentRiskManagementAddEdit.cs" />
+    <Compile Include="Data\StudentData\StudentNotesAddEdit.cs" />
+    <Compile Include="Data\StudentData\StudentMedicalConditionAddEdit.cs" />
+    <Compile Include="Data\StudentData\StudentEmergencyContactAddEdit.cs" />
+    <Compile Include="Data\StudentData\StudentNextOfAddEdit.cs" />
+    <Compile Include="Data\StudentData\StudentDoctorAddEdit.cs" />
+    <Compile Include="Data\StudentData\StudentDataAddEditBase.cs" />
+    <Compile Include="Data\StudentMedicalConditionAndTreatmentData.cs" />
+    <Compile Include="Data\RiskManagementPlanData.cs" />
+    <Compile Include="Data\StudentAbilityData.cs" />
+    <Compile Include="Data\IncidentData.cs" />
+    <Compile Include="Data\StudentPersonalCareData.cs" />
+    <Compile Include="Data\StudentNoteData.cs" />
+    <Compile Include="Data\MedicalConditionData.cs" />
+    <Compile Include="Data\LocationData.cs" />
+    <Compile Include="Data\ResidentRollCall\ResidentRollCallData.cs" />
+    <Compile Include="Data\TitleData.cs" />
+    <Compile Include="Data\EthnicityData.cs" />
+    <Compile Include="Data\NextOfKinData.cs" />
+    <Compile Include="Data\DoctorData.cs" />
+    <Compile Include="Data\StaffData.cs" />
+    <Compile Include="Data\DataBase.cs" />
+    <Compile Include="EncryptionNotUsed.cs" />
+    <Compile Include="Data\IData.cs" />
+    <Compile Include="Data\StudentData\StudentData.cs" />
+    <Compile Include="BusinessObjects\MedicalCondition.cs" />
+    <Compile Include="Data\DataFile\ExportClasses\FieldNameMapper.cs" />
+    <Compile Include="PDFFile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BusinessObjects\Person\Person.cs" />
+    <Compile Include="SystemUser\Role.cs" />
+    <Compile Include="SystemUser\UserRoleAction.cs" />
+    <Compile Include="SystemUser\SystemUser.cs" />
+    <Compile Include="SystemUser\SystemUserData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{8B1EFD99-3CD4-4670-BDD5-AEB06C4722BB}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

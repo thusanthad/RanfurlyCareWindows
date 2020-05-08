@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A085B35A-6DF8-44D1-AB6B-2B19D5DD86FB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClassStructure</RootNamespace>
+    <AssemblyName>ClassStructure</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Windows\assembly\GAC_MSIL\Microsoft.ReportViewer.WinForms\10.0.0.0__b03f5f7f11d50a3a\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Common\CommonData.cs" />
+    <Compile Include="Classes\Common\CommonVariables.cs" />
+    <Compile Include="Classes\Customer\CustomerData.cs" />
+    <Compile Include="Classes\JobState\NewJobFromPreviousJob.cs" />
+    <Compile Include="Classes\Task\TaskData.cs" />
+    <Compile Include="Classes\User\Encryption.cs" />
+    <Compile Include="Classes\JobSearchCriteria\AllCompletedJobsLastThirtyDays.cs" />
+    <Compile Include="Classes\JobSearchCriteria\AllCurretntJobs.cs" />
+    <Compile Include="Classes\JobSearchCriteria\CompletedJobsForReport.cs" />
+    <Compile Include="Classes\JobSearchCriteria\CurrentJobsForReport.cs" />
+    <Compile Include="Classes\JobSearchCriteria\OnlyMyCompletedJobsLastThirtyDays.cs" />
+    <Compile Include="Classes\JobSearchCriteria\OnlyMyCurrentJobs.cs" />
+    <Compile Include="Classes\JobState\Completed.cs" />
+    <Compile Include="Classes\JobState\NotStarted.cs" />
+    <Compile Include="Classes\JobState\InProgress.cs" />
+    <Compile Include="Classes\JobState\Proof.cs" />
+    <Compile Include="Classes\JobState\QA.cs" />
+    <Compile Include="Classes\JobState\NewJob.cs" />
+    <Compile Include="Classes\Job\JobData.cs" />
+    <Compile Include="Classes\JobSearchCriteria\JobSearchCriteria.cs" />
+    <Compile Include="Classes\JobState\JobState.cs" />
+    <Compile Include="Classes\Job\JobStatus.cs" />
+    <Compile Include="Classes\Job\Job.cs" />
+    <Compile Include="Classes\Job\JobTask.cs" />
+    <Compile Include="Classes\Job\JobTaskData.cs" />
+    <Compile Include="Classes\User\AnyOtherUser.cs" />
+    <Compile Include="Classes\User\CampaignManager.cs" />
+    <Compile Include="Classes\User\Developer.cs" />
+    <Compile Include="Classes\User\SystemUser.cs" />
+    <Compile Include="Classes\Task\Task.cs" />
+    <Compile Include="Classes\User\SystemUserData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{8b1efd99-3cd4-4670-bdd5-aeb06c4722bb}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
